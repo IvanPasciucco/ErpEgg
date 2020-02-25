@@ -597,7 +597,7 @@ a {
 .bg--theme {
   background: #e59285; }
 .bg--gray {
-  background: #f6f6f6; }
+  background: #dcdcdc; }
 .bg--light {
   background: #999999; }
 .bg--dark {
@@ -605,7 +605,7 @@ a {
 .bg--black {
   background: #000000; }
 .bg--white {
-  background: #ffffff; }
+  background: #dcdcdc; }
 .bg__cat--1 {
   background: #f9f9f9; }
 .bg__cat--2 {
@@ -629,7 +629,7 @@ a {
 
 /* Background Image */
 .bg-image--1 {
-  background-image: url(images/bg/1.jpg);
+  background-image: url(images/bg/con03r.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; }
@@ -1755,7 +1755,8 @@ Header Styles
 .boxlayout {
   padding: 30px; }
 .header__area .container-fluid {
-  padding: 0 80px; }
+  padding: 0 80px;
+background-color:#FFD72B; }
 .header__area .menubar {
   display: inline-block; }
   .header__area .menubar a.open_sidebar {
@@ -1884,7 +1885,7 @@ Header Styles
 	  text-transform: uppercase;
 	  transition: all 0.4s ease 0s;
 	}
-		.mainmenu__nav .meninmenu li a:hover{color: #e59285;}
+		.mainmenu__nav .meninmenu li a:hover{color: #FFB52B;}
 		.is-sticky .mainmenu__nav .meninmenu li a {
 		  color: #fff;
 		}
@@ -6034,13 +6035,14 @@ a.checkout__title {
   width: 25px;
 }
 .footer-static-top {
-  background: #ffffff none repeat scroll 0 0;
-  border-bottom: 1px solid #ebebeb;
-  padding: 70px 0;
+  background: #CCC8C8 none repeat scroll 0 0;
+  border-bottom: 1px solid #333;
+  padding: 20px 0;
   text-align: center;
 }
 .copyright__wrapper {
-  padding: 18px 0; }
+  padding: 18px 0;
+  background-color: #CCC8C8; }
 .footer__menu .ft__logo a {
   display: block;
   margin-bottom: 25px;
@@ -6060,7 +6062,7 @@ a.checkout__title {
   margin-left: 80px;
   margin-right: 80px; }
 .bg__cat--8 .footer-static-top {
-  background: transparent none repeat scroll 0 0; }
+  background:#CCC8C8 none repeat scroll 0 0; }
 .brown--color .copy__right__inner p a:hover {
   color: #ce7852; }
 
@@ -6141,7 +6143,7 @@ section.wn_contact_area {
   height: 97%;
   left: 4px;
   opacity: 0.6;
-  position: absolute;
+  position: relative;
   top: 4px;
   width: 97%;
   transition: .4s;
@@ -6149,7 +6151,7 @@ section.wn_contact_area {
 .slick-slide.slick-center .product__thumb {
   color: #e67e22;
   opacity: 1;
-  transform: scaleY(1.10);
+
 }
 .slick-slide .product__thumb {
   margin: 5px 0;
