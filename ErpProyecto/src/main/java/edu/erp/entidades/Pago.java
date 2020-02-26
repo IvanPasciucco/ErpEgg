@@ -1,15 +1,26 @@
 package edu.erp.entidades;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Pago {
 
-    
-    
-private int Efectivo;
-private String cheques;
+    @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
+    private int Efectivo;
+    private String cheques;
+
+    @OneToOne
+    private Compra compra;
+
+    public Pago() {
+    }
 
     public int getEfectivo() {
         return Efectivo;
@@ -27,7 +38,12 @@ private String cheques;
         this.cheques = cheques;
     }
 
-   
+    public String getId() {
+        return id;
+    }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
 }

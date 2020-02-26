@@ -7,6 +7,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class User {
+    
     @Id
     @GeneratedValue (generator="uuid")
     @GenericGenerator(name= "uuid", strategy = "uuid2")
@@ -15,7 +16,7 @@ public class User {
     private String clave;
     private String email;
     private String tel;
-
+    
     public User(String id, String nombre, String clave, String email, String tel) {
         this.id = id;
         this.nombre = nombre;

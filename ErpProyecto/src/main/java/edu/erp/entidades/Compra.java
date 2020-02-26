@@ -8,25 +8,23 @@ import javax.persistence.OneToOne;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class Compra { 
+public class Compra {
 
     @Id
-    @GeneratedValue (generator="uuid")
-    @GenericGenerator(name= "uuid", strategy = "uuid2")
-private String id;
-private Object factura;
-private Producto producto;
-private Pedidos pedidos;
-private int PrecioAprox;
-private Date FechaAutomatica;
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
+    private Factura factura;
+    private Producto producto;
+    private Pedidos pedidos;
+    private int PrecioAprox;
+    private Date FechaAutomatica;
 
-@OneToOne
-private Pago pago;
+    @OneToOne
+    private Pago pago;
 
-@OneToOne
-private Compra compra;
-
-    
+    @OneToOne
+    private Compra compra;
 
     public Producto getProducto() {
         return producto;
@@ -60,6 +58,4 @@ private Compra compra;
         this.FechaAutomatica = FechaAutomatica;
     }
 
-
-    
 }

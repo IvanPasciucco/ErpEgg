@@ -23,6 +23,9 @@ public class Proveedor {
     private Date fechaCompra;
     private Date fechaEntrega;
 
+    public Proveedor() {
+    }
+
     
     
     public String getDireccion() {
@@ -87,6 +90,14 @@ public class Proveedor {
 
     public void setFechaEntrega(Date fechaEntrega) {
         this.fechaEntrega = fechaEntrega;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
     
     

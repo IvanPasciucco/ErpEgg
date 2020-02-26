@@ -9,21 +9,24 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 public class Producto {
 
-@Id
-@GeneratedValue (generator="uuid")
-@GenericGenerator(name= "uuid", strategy = "uuid2")
-private int id;
-private int PrecioBase;
-private Object stock;
-private Object ProveedorOpcional;
-private String NombreProducto;
-private Object descuento;
+    @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private int id;
+    private int PrecioBase;
+    private Integer stock;
+    private String ProveedorOpcional;
+    private String NombreProducto;
+    private int descuento;
 
-@ManyToOne
-private Proveedor proveedor;
+    @ManyToOne
+    private Proveedor proveedor;
 
-@ManyToOne
-private Producto producto;
+    @ManyToOne
+    private Producto producto;
+
+    public Producto() {
+    }
 
     public int getId() {
         return id;
@@ -41,19 +44,19 @@ private Producto producto;
         this.PrecioBase = PrecioBase;
     }
 
-    public Object getStock() {
+    public Integer getStock() {
         return stock;
     }
 
-    public void setStock(Object stock) {
+    public void setStock(Integer stock) {
         this.stock = stock;
     }
 
-    public Object getProveedorOpcional() {
+    public String getProveedorOpcional() {
         return ProveedorOpcional;
     }
 
-    public void setProveedorOpcional(Object ProveedorOpcional) {
+    public void setProveedorOpcional(String ProveedorOpcional) {
         this.ProveedorOpcional = ProveedorOpcional;
     }
 
@@ -65,15 +68,12 @@ private Producto producto;
         this.NombreProducto = NombreProducto;
     }
 
-    public Object getDescuento() {
+    public int getDescuento() {
         return descuento;
     }
 
-    public void setDescuento(Object descuento) {
+    public void setDescuento(int descuento) {
         this.descuento = descuento;
     }
 
-
-
-    
 }

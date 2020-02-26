@@ -3,55 +3,67 @@ package edu.erp.entidades;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Vehiculo {
 
     @Id
-    @GeneratedValue (generator="uuid")
-    @GenericGenerator(name= "uuid", strategy = "uuid2")
-    
-private String id;
-private Object TipoDeVehiculo;
-private Object MarcaModelo;
-private Object Capacidad;
-private Object patente;
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
+    private String TipoDeVehiculo;
+    private String MarcaModelo;
+    private int Capacidad;
+    private String patente;
 
-    public Object getTipoDeVehiculo() {
+    public Vehiculo() {
+    }
+    
+    
+    @OneToOne
+    private Empleado empleado;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTipoDeVehiculo() {
         return TipoDeVehiculo;
     }
 
-    public void setTipoDeVehiculo(Object TipoDeVehiculo) {
+    public void setTipoDeVehiculo(String TipoDeVehiculo) {
         this.TipoDeVehiculo = TipoDeVehiculo;
     }
 
-    public Object getMarcaModelo() {
+    public String getMarcaModelo() {
         return MarcaModelo;
     }
 
-    public void setMarcaModelo(Object MarcaModelo) {
+    public void setMarcaModelo(String MarcaModelo) {
         this.MarcaModelo = MarcaModelo;
     }
 
-    public Object getCapacidad() {
+    public int getCapacidad() {
         return Capacidad;
     }
 
-    public void setCapacidad(Object Capacidad) {
+    public void setCapacidad(int Capacidad) {
         this.Capacidad = Capacidad;
     }
 
-    public Object getPatente() {
+    public String getPatente() {
         return patente;
     }
 
-    public void setPatente(Object patente) {
+    public void setPatente(String patente) {
         this.patente = patente;
     }
 
-    
-
-
-    
+   
 }

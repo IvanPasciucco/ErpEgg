@@ -15,20 +15,12 @@ public class Empleado {
 
 private String Cuil;
 private String direccion;
-private Object Vehiculos;
-private Object Pedidos;
-private Object hs;
+private String Vehiculos;
+private String Pedidos;
+private int hs;
 
 @OneToOne
 private Vehiculo vehiculo;
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
 
     public String getCuil() {
         return Cuil;
@@ -38,29 +30,39 @@ private Vehiculo vehiculo;
         this.Cuil = Cuil;
     }
 
-    public Object getVehiculos() {
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getVehiculos() {
         return Vehiculos;
     }
 
-    public void setVehiculos(Object Vehiculos) {
+    public void setVehiculos(String Vehiculos) {
         this.Vehiculos = Vehiculos;
     }
 
-    public Object getPedidos() {
+    public String getPedidos() {
         return Pedidos;
     }
 
-    public void setPedidos(Object Pedidos) {
+    public void setPedidos(String Pedidos) {
         this.Pedidos = Pedidos;
     }
 
-    public Object getHs() {
+    public int getHs() {
         return hs;
     }
 
-    public void setHs(Object hs) {
+    public void setHs(int hs) {
         this.hs = hs;
     }
+
+   
     
 
 
