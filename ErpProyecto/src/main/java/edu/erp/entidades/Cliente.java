@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 
 @Entity
 public class Cliente extends User {
-    
+   
     private String direccion;
     private CarritoCompra carrito;
     private String cuil_cuit;

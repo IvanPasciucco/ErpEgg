@@ -1,11 +1,17 @@
 package edu.erp.entidades;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class Producto extends Proveedor {
+public class Producto {
 
+@Id
+@GeneratedValue (generator="uuid")
+@GenericGenerator(name= "uuid", strategy = "uuid2")
 private int id;
 private int PrecioBase;
 private Object stock;

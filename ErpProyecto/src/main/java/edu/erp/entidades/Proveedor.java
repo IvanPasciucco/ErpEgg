@@ -2,11 +2,18 @@ package edu.erp.entidades;
 
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import org.hibernate.annotations.GenericGenerator;
 
 
 @Entity
 public class Proveedor {
     
+    @Id
+    @GeneratedValue (generator="uuid")
+    @GenericGenerator(name= "uuid", strategy = "uuid2")
+    private String id;
     private String direccion;
     private String productoComprado;
     private String descripcion;

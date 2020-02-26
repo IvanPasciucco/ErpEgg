@@ -1,11 +1,18 @@
 package edu.erp.entidades;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Vehiculo {
+
+    @Id
+    @GeneratedValue (generator="uuid")
+    @GenericGenerator(name= "uuid", strategy = "uuid2")
     
+private String id;
 private Object TipoDeVehiculo;
 private Object MarcaModelo;
 private Object Capacidad;
