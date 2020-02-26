@@ -558,9 +558,7 @@ a:hover {
 
 a {
   transition: 0.3s; }
-  iframe{width: 100%;}
-.container{margin-top: 100px;}
-header{background-color: black;position: fixed;}
+
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
