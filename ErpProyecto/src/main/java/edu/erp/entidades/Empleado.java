@@ -18,6 +18,7 @@ private String direccion;
 private String Vehiculos;
 private String Pedidos;
 private int hs;
+private Compra compra;
 
 @OneToOne
 private Vehiculo vehiculo;

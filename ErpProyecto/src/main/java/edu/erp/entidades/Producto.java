@@ -13,11 +13,10 @@ public class Producto {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private int id;
-    private int PrecioBase;
+    private double PrecioBase;
     private Integer stock;
     private String ProveedorOpcional;
     private String NombreProducto;
-    private int descuento;
 
     @ManyToOne
     private Proveedor proveedor;
@@ -36,11 +35,11 @@ public class Producto {
         this.id = id;
     }
 
-    public int getPrecioBase() {
+    public double getPrecioBase() {
         return PrecioBase;
     }
 
-    public void setPrecioBase(int PrecioBase) {
+    public void setPrecioBase(double PrecioBase) {
         this.PrecioBase = PrecioBase;
     }
 
@@ -67,13 +66,4 @@ public class Producto {
     public void setNombreProducto(String NombreProducto) {
         this.NombreProducto = NombreProducto;
     }
-
-    public int getDescuento() {
-        return descuento;
-    }
-
-    public void setDescuento(int descuento) {
-        this.descuento = descuento;
-    }
-
 }

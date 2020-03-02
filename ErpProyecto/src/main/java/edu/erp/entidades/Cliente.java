@@ -9,29 +9,27 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Cliente extends User {
-    
-    @Id
-    @GeneratedValue (generator="uuid")
-    @GenericGenerator(name= "uuid", strategy = "uuid2")
-    private String id;
     private String direccion;
-    private CarritoCompra carrito;
     private String cuil_cuit;
-
+    private Compra compra;
+    
     @OneToOne
-    private User user;
-            
-    public Cliente(String tel,  String id,String nombre,String clave,String email,String direccion, CarritoCompra carrito, String cuil_cuit) {
-        super(id, nombre, clave, email, tel);
-        this.direccion = direccion;
-        this.carrito = carrito;
-        this.cuil_cuit = cuil_cuit;
-    }
+    private CarritoCompra carrito;
+    
     
     public Cliente(){
         super();
     }
 
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
+    }
+
+    
     public String getDireccion() {
         return direccion;
     }
@@ -56,12 +54,5 @@ public class Cliente extends User {
         this.cuil_cuit = cuil_cuit;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
    
 }

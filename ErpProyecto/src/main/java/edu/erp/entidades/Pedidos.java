@@ -15,7 +15,6 @@ public class Pedidos {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    private String pedidos;
     private Compra compra;
     private Date FechaAutomatica;
     private Empleado empleados;
@@ -23,8 +22,7 @@ public class Pedidos {
 
     public Pedidos() {
     }
-
-
+    
     public Compra getCompra() {
         return compra;
     }
