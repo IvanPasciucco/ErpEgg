@@ -1,5 +1,6 @@
 package edu.erp.entidades;
 
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,13 +11,8 @@ import org.hibernate.annotations.GenericGenerator;
 public class Empleado {
 
 @Id
-@GeneratedValue (generator="uuid")
-@GenericGenerator(name= "uuid", strategy = "uuid2")
-
 private String Cuil;
-private String direccion;
-private String Vehiculos;
-private String Pedidos;
+private List<Pedidos> Pedidos;
 private int hs;
 
 @OneToOne
@@ -30,30 +26,21 @@ private Vehiculo vehiculo;
         this.Cuil = Cuil;
     }
 
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getVehiculos() {
-        return Vehiculos;
-    }
-
-    public void setVehiculos(String Vehiculos) {
-        this.Vehiculos = Vehiculos;
-    }
-
-    public String getPedidos() {
+    public List<Pedidos> getPedidos() {
         return Pedidos;
     }
 
-    public void setPedidos(String Pedidos) {
+    public void setPedidos(List<Pedidos> Pedidos) {
         this.Pedidos = Pedidos;
     }
 
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
     public int getHs() {
         return hs;
     }

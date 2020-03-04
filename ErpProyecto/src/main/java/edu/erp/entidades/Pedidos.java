@@ -1,6 +1,7 @@
 package edu.erp.entidades;
 
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,8 +16,8 @@ public class Pedidos {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    private String pedidos;
     private Compra compra;
+    private List<Producto> productos;
     private Date FechaAutomatica;
     private Empleado empleados;
     private Date FechaEstimada;
@@ -24,7 +25,14 @@ public class Pedidos {
     public Pedidos() {
     }
 
+    public List<Producto> getProductos() {
+        return productos;
+    }
 
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
+    
     public Compra getCompra() {
         return compra;
     }
@@ -65,14 +73,7 @@ public class Pedidos {
         this.id = id;
     }
 
-    public String getPedidos() {
-        return pedidos;
-    }
 
-    public void setPedidos(String pedidos) {
-        this.pedidos = pedidos;
-    }
-    
     
 
 }

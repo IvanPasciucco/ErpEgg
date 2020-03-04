@@ -15,7 +15,7 @@ public class CarritoCompra {
     @GenericGenerator(name= "uuid", strategy = "uuid2")
     private String id;
     private List<Producto> productos;
-    private Object PrecioAprox;
+    private double PrecioAprox;
 
     public CarritoCompra() {
     }
@@ -31,11 +31,11 @@ public class CarritoCompra {
         this.productos = productos;
     }
 
-    public Object getPrecioAprox() {
+    public double getPrecioAprox() {
         return PrecioAprox;
     }
 
-    public void setPrecioAprox(Object PrecioAprox) {
+    public void setPrecioAprox(double PrecioAprox) {
         this.PrecioAprox = PrecioAprox;
     }
 

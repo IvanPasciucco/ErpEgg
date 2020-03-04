@@ -13,7 +13,7 @@ public interface ClienteRepositorio extends JpaRepository<String, Cliente> {
     @Query ("SELECT c From Clientes c")
     public List <Cliente>BuscarTodosLosClientes();
     
-    @Query("Select c From Clientes c Where c.id= :id")
+    @Query("Select c From Clientes c Where c.DNI= :id")
     public Cliente BuscarClientePorId(@Param ("id") String id);
     
 }

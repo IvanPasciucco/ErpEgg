@@ -7,6 +7,5 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Administrador extends User {
-    private String adminID;
     
 }

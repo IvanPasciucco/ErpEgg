@@ -12,12 +12,11 @@ public class Producto {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
-    private int id;
-    private int PrecioBase;
+    private String id;
+    private double PrecioBase;
     private Integer stock;
     private String ProveedorOpcional;
-    private String NombreProducto;
-    private int descuento;
+    private String nombre;
 
     @ManyToOne
     private Proveedor proveedor;
@@ -28,20 +27,12 @@ public class Producto {
     public Producto() {
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
-    }
-
-    public int getPrecioBase() {
-        return PrecioBase;
-    }
-
-    public void setPrecioBase(int PrecioBase) {
-        this.PrecioBase = PrecioBase;
     }
 
     public Integer getStock() {
@@ -52,6 +43,15 @@ public class Producto {
         this.stock = stock;
     }
 
+
+    public double getPrecioBase() {
+        return PrecioBase;
+    }
+
+    public void setPrecioBase(double PrecioBase) {
+        this.PrecioBase = PrecioBase;
+    }
+
     public String getProveedorOpcional() {
         return ProveedorOpcional;
     }
@@ -60,20 +60,29 @@ public class Producto {
         this.ProveedorOpcional = ProveedorOpcional;
     }
 
-    public String getNombreProducto() {
-        return NombreProducto;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombreProducto(String NombreProducto) {
-        this.NombreProducto = NombreProducto;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public int getDescuento() {
-        return descuento;
+    public Proveedor getProveedor() {
+        return proveedor;
     }
 
-    public void setDescuento(int descuento) {
-        this.descuento = descuento;
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
     }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
 
 }

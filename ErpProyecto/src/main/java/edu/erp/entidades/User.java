@@ -1,38 +1,72 @@
 package edu.erp.entidades;
 
+import java.util.Date;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class User {
     
     @Id
-    @GeneratedValue (generator="uuid")
-    @GenericGenerator(name= "uuid", strategy = "uuid2")
-    private String id;
+    private String DNI;
     private String nombre;
     private String clave;
     private String email;
     private String tel;
+    private int descuento; 
+        private Foto foto;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date alta;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date baja;
     
     public User(String id, String nombre, String clave, String email, String tel) {
-        this.id = id;
+        this.DNI = id;
         this.nombre = nombre;
         this.clave = clave;
         this.email = email;
-        this.tel = tel;
+        this.tel = tel;}
+
+
+    
+    
+    public Foto getFoto() {
+        return foto;
+    }
+
+    public void setFoto(Foto foto) {
+        this.foto = foto;
+    }
+
+    
+    public Date getAlta() {
+        return alta;
+    }
+
+    public void setAlta(Date alta) {
+        this.alta = alta;
+    }
+
+    public Date getBaja() {
+        return baja;
+    }
+
+    public void setBaja(Date baja) {
+        this.baja = baja;
     }
 
     public User() {
     }    
     public String getId() {
-        return id;
+        return DNI;
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.DNI = id;
     }
 
     public String getNombre() {
