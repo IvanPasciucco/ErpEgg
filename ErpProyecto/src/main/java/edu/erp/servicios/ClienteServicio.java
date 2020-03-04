@@ -13,19 +13,19 @@ public class ClienteServicio {
     @Autowired
     public CompraRepositorio compraRepositorio;
     private void agregarProducto(Cliente cliente,Producto prod){
-        cliente.getCarrito().getProductos().add(prod);
+        cliente.getCarrito().getProducto().add(prod);
         cliente.getCarrito().setPrecioAprox(prod.getPrecioBase());
         
     }    
     private void quitarProducto(Cliente cliente,Producto prod){
-        cliente.getCarrito().getProductos().remove(prod);
+        cliente.getCarrito().getProducto().remove(prod);
         cliente.getCarrito().setPrecioAprox((cliente.getCarrito().getPrecioAprox())-(prod.getPrecioBase()));
         
     }
     private void EjecutarCompra(Cliente cliente)throws ErrorServicio{
         if (cliente.getCompra().equals(null)){
         Compra compra = new Compra();
-        compra.setProductos(cliente.getCarrito().getProductos());
+        compra.setProductos(cliente.getCarrito().getProducto());
         compra.setPrecioAprox(cliente.getCarrito().getPrecioAprox());
         compra.setEstado(Estado.PENDIENTE);
         compra.setCliente(cliente);

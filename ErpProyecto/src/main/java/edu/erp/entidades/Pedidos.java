@@ -63,13 +63,13 @@ public class Pedidos {
         this.id = id;
     }
 
-    public String getPedidos() {
-        return pedidos;
-    }
-
-    public void setPedidos(String pedidos) {
-        this.pedidos = pedidos;
-    }
+//    public String getPedidos() {
+//        return pedidos;
+//    }
+//
+//    public void setPedidos(String pedidos) {
+//        this.pedidos = pedidos;
+//    }
     
     
 
