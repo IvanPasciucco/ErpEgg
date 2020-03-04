@@ -14,22 +14,16 @@ public class CarritoCompra {
     @GeneratedValue (generator="uuid")
     @GenericGenerator(name= "uuid", strategy = "uuid2")
     private String id;
-    private List<Producto> productos;
+
     private double PrecioAprox;
 
     public CarritoCompra() {
     }
     
    @OneToMany
-   private Producto producto;
+   private List<Producto> producto;
     
-    public List<Producto> getProductos() {
-        return productos;
-    }
-
-    public void setProductos(List<Producto> productos) {
-        this.productos = productos;
-    }
+ 
 
     public double getPrecioAprox() {
         return PrecioAprox;
@@ -47,4 +41,13 @@ public class CarritoCompra {
         this.id = id;
     }
 
+    public List<Producto> getProducto() {
+        return producto;
+    }
+
+    public void setProducto(List<Producto> producto) {
+        this.producto = producto;
+    }
+    
+    
 }

@@ -22,8 +22,9 @@ public class Producto {
     private Proveedor proveedor;
 
     @ManyToOne
-    private Producto producto;
-
+    private CarritoCompra carritoCompra;
+    
+    
     public Producto() {
     }
 
@@ -66,4 +67,23 @@ public class Producto {
     public void setNombreProducto(String NombreProducto) {
         this.NombreProducto = NombreProducto;
     }
+
+    public Proveedor getProveedor() {
+        return proveedor;
+    }
+
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
+    }
+
+    public CarritoCompra getCarritoCompra() {
+        return carritoCompra;
+    }
+
+    public void setCarritoCompra(CarritoCompra carritoCompra) {
+        this.carritoCompra = carritoCompra;
+    }
+    
+    
+    
 }
