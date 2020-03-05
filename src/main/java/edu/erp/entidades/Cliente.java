@@ -11,24 +11,10 @@ import org.hibernate.annotations.GenericGenerator;
 public class Cliente extends User {
     private String direccion;
     private String cuil_cuit;
-    private Compra compra;
     
     @OneToOne
     private CarritoCompra carrito;
     
-    
-    public Cliente(){
-        super();
-    }
-
-    public Compra getCompra() {
-        return compra;
-    }
-
-    public void setCompra(Compra compra) {
-        this.compra = compra;
-    }
-
     
     public String getDireccion() {
         return direccion;

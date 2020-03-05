@@ -8,15 +8,15 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductoRepositorio extends JpaRepository<String, Producto>{
-   
-    @Query ("Select c From Productos ")
-    public List<Producto> BuscarProductos();
+public interface ProductoRepositorio extends JpaRepository<Producto, String>{
+//   
+//    @Query ("Select c From Productos ")
+//    public List<Producto> BuscarProductos();
     
-    @Query ("Select c From Productos where c.id = :id")
-    public Producto BuscarProducoId(@Param ("id") String id);
+//    @Query ("Select c From Productos where c.id = :id")
+//    public Producto BuscarProducoId(@Param ("id") String id);
     
-    @Query ("Select c From Productos where c.stock =:stock")
-    public Producto BuscarProductoPorStock(@Param("stock") Integer stock);
-    
+//    @Query ("SELECT c FROM Productos c WHERE c.stock =:stock")
+//    public Producto BuscarProductoPorStock(@Param("stock") int stock);
+//    
 }

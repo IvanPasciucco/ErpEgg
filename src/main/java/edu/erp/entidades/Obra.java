@@ -7,7 +7,7 @@ import javax.persistence.ManyToOne;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-public class Obra extends Cliente {
+public class Obra{
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -18,9 +18,6 @@ public class Obra extends Cliente {
 
     @ManyToOne
     private Cliente cliente;
-
-    public Obra() {
-    }
     
     public int getCP() {
         return CP;

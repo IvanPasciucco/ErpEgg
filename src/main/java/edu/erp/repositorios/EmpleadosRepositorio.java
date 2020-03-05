@@ -8,10 +8,10 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EmpleadosRepositorio extends JpaRepository <String,Empleado> {
-@Query("Select c From Empleados")
-public List<Empleado> ObtenerEmpleados();
-@Query("Select c From Empleados where c.id = :id")
-public Empleado ObtenerEmpleadoId(@Param("id") String id);
+public interface EmpleadosRepositorio extends JpaRepository <Empleado, String> {
+//@Query("Select c From Empleados")
+//public List<Empleado> ObtenerEmpleados();
+//@Query("Select c From Empleados where c.id = :id")
+//public Empleado ObtenerEmpleadoId(@Param("id") String id);
 
 }

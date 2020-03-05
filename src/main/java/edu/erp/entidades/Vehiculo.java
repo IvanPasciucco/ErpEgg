@@ -17,10 +17,6 @@ public class Vehiculo {
     private String MarcaModelo;
     private int Capacidad;
     private String patente;
-
-    public Vehiculo() {
-    }
-    
     
     @OneToOne
     private Empleado empleado;

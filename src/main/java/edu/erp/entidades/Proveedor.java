@@ -4,6 +4,8 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 
 
@@ -20,13 +22,12 @@ public class Proveedor {
     private int monto;
     private String cuil;
     private int formaPago;
-    private Date fechaCompra;
-    private Date fechaEntrega;
-
-    public Proveedor() {
-    }
-
     
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date fechaCompra;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date fechaEntrega;
     
     public String getDireccion() {
         return direccion;

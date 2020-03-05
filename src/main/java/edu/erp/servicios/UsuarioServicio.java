@@ -46,9 +46,9 @@ public class UsuarioServicio {
         validar(DNI,nombre,apellido,mail,clave,clave2);
         
 
-        User res = usuarioRepositorio.ObtenerUsuarioporId(DNI);
+        Optional<User> res = usuarioRepositorio.findById(DNI);
         if (res!=null){
-        User user = res;
+        User user = res.get();
         String id= null;
         if(user.getFoto()!=null){
           id = user.getFoto().getId();
@@ -90,7 +90,7 @@ public class UsuarioServicio {
     }
 
     private void validar(String id,String nombre, String apellido, String mail, String clave, String clave2) throws ErrorServicio{
-        if (id ==null || id.isEmpty() || !usuarioRepositorio.ObtenerUsuarioporId(id).getNombre().equals(null)){
+        if (id ==null || id.isEmpty() || !usuarioRepositorio.findById(id).get().equals(null)){
             throw new ErrorServicio("El DNI es invalido o ya esta utilizado");
         }
         if(nombre == null || nombre.isEmpty()){

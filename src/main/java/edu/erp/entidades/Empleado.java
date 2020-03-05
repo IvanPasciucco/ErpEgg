@@ -14,10 +14,12 @@ public class Empleado {
 @GenericGenerator(name= "uuid", strategy = "uuid2")
 private String Cuil;
 private String direccion;
-private String Vehiculos;
-private String Pedidos;
-private int hs;
-private Compra compra;
+
+@OneToOne
+private Vehiculo Vehiculos;
+
+@OneToOne
+private Pedidos Pedidos;
 
 @OneToOne
 private Vehiculo vehiculo;
@@ -38,33 +40,28 @@ private Vehiculo vehiculo;
         this.direccion = direccion;
     }
 
-    public String getVehiculos() {
+    public Vehiculo getVehiculos() {
         return Vehiculos;
     }
 
-    public void setVehiculos(String Vehiculos) {
+    public void setVehiculos(Vehiculo Vehiculos) {
         this.Vehiculos = Vehiculos;
     }
 
-    public String getPedidos() {
+    public Pedidos getPedidos() {
         return Pedidos;
     }
 
-    public void setPedidos(String Pedidos) {
+    public void setPedidos(Pedidos Pedidos) {
         this.Pedidos = Pedidos;
     }
 
-    public int getHs() {
-        return hs;
+    public Vehiculo getVehiculo() {
+        return vehiculo;
     }
 
-    public void setHs(int hs) {
-        this.hs = hs;
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
     }
-
-   
     
-
-
-
 }

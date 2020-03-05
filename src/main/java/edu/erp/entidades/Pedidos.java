@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
@@ -15,13 +17,18 @@ public class Pedidos {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
+    
+    @ManyToOne
     private Compra compra;
+    
+    @Temporal(TemporalType.TIMESTAMP)
     private Date FechaAutomatica;
+    
+    @OneToOne
     private Empleado empleados;
+    
+    @Temporal(TemporalType.TIMESTAMP)
     private Date FechaEstimada;
-
-    public Pedidos() {
-    }
     
     public Compra getCompra() {
         return compra;

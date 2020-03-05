@@ -8,12 +8,12 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClienteRepositorio extends JpaRepository<String, Cliente> {
+public interface ClienteRepositorio extends JpaRepository<Cliente, String> {
 
-    @Query ("SELECT c From Clientes c")
-    public List <Cliente>BuscarTodosLosClientes();
+//    @Query ("SELECT c From Clientes c")
+//    public List <Cliente>BuscarTodosLosClientes();
     
-    @Query("Select c From Clientes c Where c.id= :id")
-    public Cliente BuscarClientePorId(@Param ("id") String id);
+//    @Query("Select c From Clientes c Where c.id= :id")
+//    public Cliente BuscarClientePorId(@Param ("id") String id);
     
 }

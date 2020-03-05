@@ -11,12 +11,12 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AdminRepositorio extends JpaRepository<Administrador, String> {
-
-    @Query("Select c From Administrador")
-    public List<Administrador> BuscarAdmin();
-    @Query("Select c From User where c.DNI = :DNI")
-    public User ObtenerUsuarioporId(@Param("DNI") String DNI);
-        @Query("SELECT c FROM Usuario c WHERE c.email = :email")
+//
+//    @Query("Select a From Administrador a")
+//    public Administrador BuscarAdmin();
+//    @Query("Select c From Administrador c where c.DNI = :DNI")
+//    public User ObtenerUsuarioporId(@Param("DNI") String DNI);
+        @Query("SELECT c FROM Administrador c WHERE c.email = :email")
     public Administrador buscarPorEmail(@Param("email") String email);
     
 }

@@ -17,13 +17,9 @@ public class CarritoCompra {
 
     private double PrecioAprox;
 
-    public CarritoCompra() {
-    }
     
-   @OneToMany
-   private List<Producto> producto;
-    
- 
+//   @OneToMany
+//   private Producto producto;
 
     public double getPrecioAprox() {
         return PrecioAprox;
@@ -40,14 +36,5 @@ public class CarritoCompra {
     public void setId(String id) {
         this.id = id;
     }
-
-    public List<Producto> getProducto() {
-        return producto;
-    }
-
-    public void setProducto(List<Producto> producto) {
-        this.producto = producto;
-    }
-    
     
 }

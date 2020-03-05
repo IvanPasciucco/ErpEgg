@@ -17,12 +17,18 @@ public class User {
     private String email;
     private String tel;
     private int descuento; 
-        private Foto foto;
+    
+    @OneToOne
+    private Foto foto;
     
     @Temporal(TemporalType.TIMESTAMP)
     private Date alta;
     @Temporal(TemporalType.TIMESTAMP)
     private Date baja;
+    
+    
+    public User() {
+    }    
     
     public User(String id, String nombre, String clave, String email, String tel) {
         this.DNI = id;
@@ -30,9 +36,6 @@ public class User {
         this.clave = clave;
         this.email = email;
         this.tel = tel;}
-
-
-    
     
     public Foto getFoto() {
         return foto;
@@ -59,8 +62,6 @@ public class User {
         this.baja = baja;
     }
 
-    public User() {
-    }    
     public String getId() {
         return DNI;
     }

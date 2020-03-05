@@ -1,4 +1,11 @@
 package edu.erp.entidades;
-public class Factura {
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Factura {
+    
+    @Id
+    private String haganlascosasbienculiados;
 }
