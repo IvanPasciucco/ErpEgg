@@ -15,9 +15,7 @@ public class User {
     private String nombre;
     private String clave;
     private String email;
-    private String tel;
-    private int descuento; 
-        private Foto foto;
+    private String tel;     private Foto foto;
     
     @Temporal(TemporalType.TIMESTAMP)
     private Date alta;

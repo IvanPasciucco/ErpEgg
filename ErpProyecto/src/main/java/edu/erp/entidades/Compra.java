@@ -16,7 +16,6 @@ public class Compra {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    private Factura factura;
     private List<Producto> productos;
     private List<Pedidos> pedidos;
     private double PrecioAprox;
@@ -66,13 +65,6 @@ public class Compra {
         this.id = id;
     }
 
-    public Factura getFactura() {
-        return factura;
-    }
-
-    public void setFactura(Factura factura) {
-        this.factura = factura;
-    }
 
     public Pago getPago() {
         return pago;

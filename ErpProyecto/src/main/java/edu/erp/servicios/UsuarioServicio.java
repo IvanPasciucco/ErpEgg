@@ -26,9 +26,9 @@ public class UsuarioServicio {
     private FotoServicio fotoServicio;
 
     
-    private void Registrar(MultipartFile archivo,String id,String nombre, String apellido, String mail, String clave, String clave2) throws ErrorServicio{
+    private void Registrar(MultipartFile archivo,String id,String nombre, String mail, String clave, String clave2) throws ErrorServicio{
         
-        validar(id,nombre,apellido,mail,clave,clave2);
+        validar(id,nombre,mail,clave,clave2);
         User usuario = new User();
         usuario.setNombre(nombre);
         usuario.setId(id);
@@ -43,7 +43,7 @@ public class UsuarioServicio {
         
     }
     private void modificar (MultipartFile foto, String DNI, String nombre,String apellido,String mail,String clave,String clave2) throws ErrorServicio{
-        validar(DNI,nombre,apellido,mail,clave,clave2);
+        validar(DNI,nombre,mail,clave,clave2);
         
 
         User res = usuarioRepositorio.ObtenerUsuarioporId(DNI);
@@ -89,16 +89,12 @@ public class UsuarioServicio {
         }
     }
 
-    private void validar(String id,String nombre, String apellido, String mail, String clave, String clave2) throws ErrorServicio{
+    private void validar(String id,String nombre, String mail, String clave, String clave2) throws ErrorServicio{
         if (id ==null || id.isEmpty() || !usuarioRepositorio.ObtenerUsuarioporId(id).getNombre().equals(null)){
             throw new ErrorServicio("El DNI es invalido o ya esta utilizado");
         }
         if(nombre == null || nombre.isEmpty()){
             throw new ErrorServicio("El nombre del usuario no puede ser nulo.");
-        }
-
-        if(apellido == null || apellido.isEmpty()){
-            throw new ErrorServicio("El apellido del usuario no puede ser nulo.");
         }
         
         if(mail == null || mail.isEmpty()){
