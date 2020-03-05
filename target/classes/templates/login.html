@@ -23,6 +23,7 @@
 
 	<!-- Custom css -->
    <link rel="stylesheet" href="css/custom.css">
+   <link rel="stylesheet" href="css/style.css">
 
 	<!-- Modernizer js -->
 	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -43,23 +44,23 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
 						<div class="logo">
-							<a href="index.html">
-								<img src="images/logo/3.png" alt="logo images">
+							<a href="index">
+							<img class="imglogo" src="images/logo/logo.png" alt="logo images" width="108">
 							</a>
 						</div>
 					</div>
 					<div class="col-lg-8 d-none d-lg-block">
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
-								<li class="drop with--one--item"><a href="index.html">Home</a></li>
-								<li class="drop"><a href="about.html">Sobre nosotros</a>
+								<li class="drop with--one--item"><a href="index">Home</a></li>
+								<li class="drop"><a href="about">Sobre nosotros</a>
 									
 								</li>
-								<li class="drop"><a href="shop-grid.html">Productos</a>
+								<li class="drop"><a href="shop-grid">Productos</a>
 									
 								</li>
 								
-								<li class="drop"><a href="contact.html">Contacto</a>
+								<li class="drop"><a href="contact">Contacto</a>
 									
 								</li>
 						
@@ -72,7 +73,7 @@
 
 							<li class="shopcart"><a class="cartbox_active" href="#"><span class="product_qun">2</span></a>
 								<!-- Start Shopping Cart -->
-							<div class="block-minicart minicart__active">
+								<div class="block-minicart minicart__active">
 									<div class="minicart-content-wrapper">
 										<div class="micart__close">
 									
@@ -82,24 +83,24 @@
 											<span>Subtotal compra</span>
 										</div>
 										<div class="total_amount text-right">
-											<span></span>
+											<span>$66.00</span>
 										</div>
 										<div class="mini_action checkout">
-											<a class="checkout__btn" href="cart.html">Finalizar compra</a>
+											<a class="checkout__btn" href="cart">Finalizar compra</a>
 										</div>
 										<div class="single__items">
 											<div class="miniproduct">
 												<div class="item01 d-flex">
 													<div class="thumb">
-														<a href="product-details.html"><img
-																src="images/imagenes Productos/ArenaFina.jpg"
+														<a href="product-details"><img
+																src="images/product/sm-img/1.jpg"
 																alt="product images"></a>
 													</div>
 													<div class="content">
-														<h6><a href="product-details.html">Arena Fina</a></h6>
-														<span class="prize">$700.00</span>
+														<h6><a href="product-details">Producto 1</a></h6>
+														<span class="prize">$30.00</span>
 														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Cantidad: 1</span>
+															<span class="qun">Cantidad: 01</span>
 															<ul class="d-flex justify-content-end">
 																<li><a href="#"><i class="zmdi zmdi-settings"></i></a>
 																</li>
@@ -111,15 +112,15 @@
 												</div>
 												<div class="item01 d-flex mt--20">
 													<div class="thumb">
-														<a href="product-details.html"><img
-																src="images/imagenes Productos/Cemento.jpg"
+														<a href="product-details"><img
+																src="images/product/sm-img/3.jpg"
 																alt="product images"></a>
 													</div>
 													<div class="content">
-														<h6><a href="product-details.html">Cemento Holcim</a></h6>
-														<span class="prize">$459.00</span>
+														<h6><a href="product-details">Producto</a></h6>
+														<span class="prize">$40.00</span>
 														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Cantidad: 3</span>
+															<span class="qun">Cantidad: 03</span>
 															<ul class="d-flex justify-content-end">
 																<li><a href="#"><i class="zmdi zmdi-settings"></i></a>
 																</li>
@@ -131,15 +132,15 @@
 												</div>
 												<div class="item01 d-flex mt--20">
 													<div class="thumb">
-														<a href="product-details.html"><img
-																src="images/imagenes Productos/Yeso.jpg"
+														<a href="product-details"><img
+																src="images/product/sm-img/2.jpg"
 																alt="product images"></a>
 													</div>
 													<div class="content">
-														<h6><a href="product-details.html">Yeso Yemaco</a></h6>
-														<span class="prize">$633.00</span>
+														<h6><a href="product-details">Producto</a></h6>
+														<span class="prize">$40.00</span>
 														<div class="product_prize d-flex justify-content-between">
-															<span class="qun">Cantidad: 3</span>
+															<span class="qun">Cantidad: 03</span>
 															<ul class="d-flex justify-content-end">
 																<li><a href="#"><i class="zmdi zmdi-settings"></i></a>
 																</li>
@@ -151,6 +152,13 @@
 												</div>
 											</div>
 										</div>
+									<!-- 
+										<div class="mini_action cart">
+											<a class="cart__btn" href="cart">Finalizar compra</a>
+										</div>
+									-->
+									</div>
+								</div>
 								<!-- End Shopping Cart -->
 							</li>
 							<li class="setting__bar__icon"><a class="setting__active" href="#"></a>
@@ -172,11 +180,10 @@
 											<div class="switcher-options">
 												<div class="switcher-currency-trigger">
 													<div class="setting__menu">
-														<span><a href="login.html">Login</a></span>
-														<span><a href="crear-cuenta.html">Crear cuenta</a></span>
-														<span><a href="my-account.html">Mi cuenta</a></span>
-														<span><a href="wishlist.html">Mis favoritos</a></span></div>
-												</div>
+														<span><a href="login">Login</a></span>
+														<span><a href="crear-cuenta">Crear cuenta</a></span>
+														<span><a href="my-account">Mi cuenta</a></span>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -191,14 +198,14 @@
 					<div class="col-lg-12 d-none">
 						<nav class="mobilemenu__nav">
 							<ul class="meninmenu">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">Sobre nosotros</a></li>
-								<li><a href="shop-grid.html">Productos</a></li>
-								<li><a href="contact.html">Contacto</a></li>
+								<li><a href="index">Home</a></li>
+								<li><a href="about">Sobre nosotros</a></li>
+								<li><a href="shop-grid">Productos</a></li>
+								<li><a href="contact">Contacto</a></li>
 									
-										<li><a href="my-account.html">Mi cuenta</a></li>
-										<li><a href="cart.html">Carro de compras</a></li>
-										<li><a href="checkout.html">Pago</a></li>
+										<li><a href="my-account">Mi cuenta</a></li>
+										<li><a href="cart">Carro de compras</a></li>
+										<li><a href="checkout">Pago</a></li>
 									
 						</nav>
 					</div>
@@ -289,7 +296,7 @@
 				<div class="col-lg-12">
 					<div class="footer__widget footer__menu">
 						<div class="ft__logo">
-							<a href="index.html">
+							<a href="index">
 								<img src="images/logo/logo.png" alt="logo" width="150">
 							</a>
 						</div>

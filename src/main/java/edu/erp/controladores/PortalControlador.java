@@ -25,6 +25,10 @@ public class PortalControlador {
    public String registro() {
        return "registro.html";
   }
+    @GetMapping("/crear-cuenta")
+   public String crear() {
+       return "crear-cuenta.html";
+  }
    
    @GetMapping("/shop-grid")
    public String productos() {
