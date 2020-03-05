@@ -1,11 +1,22 @@
 package edu.erp.repositorios;
 
 import edu.erp.entidades.Administrador;
+import edu.erp.entidades.User;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 
 @Repository
 public interface AdminRepositorio extends JpaRepository<Administrador, String> {
 
+    @Query("Select c From Administrador")
+    public List<Administrador> BuscarAdmin();
+    @Query("Select c From User where c.DNI = :DNI")
+    public User ObtenerUsuarioporId(@Param("DNI") String DNI);
+        @Query("SELECT c FROM Usuario c WHERE c.email = :email")
+    public Administrador buscarPorEmail(@Param("email") String email);
+    
 }

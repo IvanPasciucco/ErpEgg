@@ -1,6 +1,7 @@
 
 package edu.erp;
 
+import edu.erp.servicios.AdminServicio;
 import edu.erp.servicios.UsuarioServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -17,11 +18,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class SeguridadConfiguracion extends WebSecurityConfigurerAdapter{
 
 @Autowired
-	public UsuarioServicio usuarioServicio;
+	public AdminServicio adminServicio;
 	
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
-            auth.userDetailsService(usuarioServicio).passwordEncoder(new BCryptPasswordEncoder());
+            auth.userDetailsService(adminServicio).passwordEncoder(new BCryptPasswordEncoder());
 	}
 	
 	@Override
