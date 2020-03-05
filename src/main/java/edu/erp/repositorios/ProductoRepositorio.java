@@ -10,13 +10,13 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProductoRepositorio extends JpaRepository<Producto, String>{
 //   
-//    @Query ("Select c From Productos ")
-//    public List<Producto> BuscarProductos();
-    
+    @Query ("Select c From Producto c")
+    public List<Producto> BuscarProductos();
+//    
 //    @Query ("Select c From Productos where c.id = :id")
 //    public Producto BuscarProducoId(@Param ("id") String id);
     
-//    @Query ("SELECT c FROM Productos c WHERE c.stock =:stock")
-//    public Producto BuscarProductoPorStock(@Param("stock") int stock);
+    @Query ("SELECT c FROM Producto c WHERE c.stock =:stock")
+    public Producto BuscarProductoPorStock(@Param("stock") int stock);
 //    
 }

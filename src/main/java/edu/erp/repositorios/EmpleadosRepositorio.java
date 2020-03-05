@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmpleadosRepositorio extends JpaRepository <Empleado, String> {
-//@Query("Select c From Empleados")
-//public List<Empleado> ObtenerEmpleados();
+@Query("Select c From Empleado c")
+public List<Empleado> ObtenerEmpleados();
 //@Query("Select c From Empleados where c.id = :id")
 //public Empleado ObtenerEmpleadoId(@Param("id") String id);
 
