@@ -16,6 +16,7 @@ public class PortalControlador {
     public String index(){
         return "index.html";
     }
+    
      @GetMapping("/about")
     public String about(){
         return "about.html";
@@ -24,9 +25,26 @@ public class PortalControlador {
    public String registro() {
        return "registro.html";
   }
-   @GetMapping("/login")
+   
+   @GetMapping("/shop-grid")
+   public String productos() {
+       return "shop-grid.html";
+  }
+   @GetMapping("/contact")
+   public String contacto() {
+       return "contact.html";
+  }
+  @GetMapping("/login")
    public String login() {
        return "login.html";
+  }
+   @GetMapping("/crear-cuenta")
+   public String crear() {
+       return "crear-cuenta.html";
+  }
+   @GetMapping("/my-account")
+   public String mi() {
+       return "my-account.html";
   }
     @PostMapping("/registrar")
    public String registrar(ModelMap modelo){
@@ -35,9 +53,6 @@ public class PortalControlador {
 //           modelo.put("apellido", apellido);
 //           modelo.put("mail", mail);
 //           modelo.put("clave", clave);
-//           modelo.put("zona", idZona);
-//           modelo.put("grupo_sanguineo", grupo_sanguineo);
-//           modelo.put("requisitos", id_requisitos);
        return "index.html";
        }
     
