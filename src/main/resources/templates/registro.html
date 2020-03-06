@@ -236,9 +236,8 @@
         <!-- End Bradcaump area -->
         <section class="wn__recent__post bg--gray ptb--80">
 			<div class="container">
-<form  class="rd-form rd-mailform" data-form-output="" data-form-type="contact" method="post" action="/registrar">
+<form  action="/registrar" method="post">
               
-              <p th:if= "${error !=null}" th:text="{error}"></p>
                 
 				<div class="row mt--50">
 					<div class="col-md-6 col-lg-4 col-sm-12">
@@ -247,29 +246,29 @@
 								<div class="account__form">
 									<div class="input__box">
 										<label>Apellido y nombre <span>*</span></label>
-										<input type="text">
+										<input type="text" name="nombre" th:value="${nombre}">
 									</div>
 									<div class="input__box">
 										<label>Correo electronico<span>*</span></label>
-										<input type="email">
+										<input type="text" name="email" th:value="${email}">
 									</div>
 									<div class="input__box">
 										<label>Telefono<span>*</span></label>
-										<input type="number">
+										<input type="text" name="tel" th:value="${tel}">
 									</div>
 
 									<div class="input__box">
 										<label>Contraseña<span>*</span></label>
-										<input type="password">
+										<input type="text" name="clave" th:value="${clave}">
 									</div>
-										<button href="/registrar" type="submit">Registrar</button>
+										<button value="submit">Registrar</button>
 									
 								</div>
-							</form>
 						</div>
 					</div>
 				</div>
 			</div>
+</form>
 		</section>
 		<!-- End My Account Area -->
 		<!-- Footer Area -->
