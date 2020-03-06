@@ -18,10 +18,10 @@
 /home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/entidades/errores/ErrorServicio.java
 /home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/repositorios/UserRepositorio.java
 /home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/entidades/Compra.java
+/home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/entidades/Usuario.java
 /home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/repositorios/EmpleadosRepositorio.java
 /home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/ErpApplication.java
 /home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/entidades/Vehiculo.java
-/home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/entidades/User.java
 /home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/entidades/Factura.java
 /home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/entidades/Obra.java
 /home/ivan/erpEggBack/ErpEgg/src/main/java/edu/erp/enumeraciones/MetodoPago.java

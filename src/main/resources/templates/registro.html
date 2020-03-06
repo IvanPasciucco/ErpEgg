@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="es">
+<html class=""wide wow-animation"" lang="es">
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -236,7 +236,10 @@
         <!-- End Bradcaump area -->
         <section class="wn__recent__post bg--gray ptb--80">
 			<div class="container">
-
+<form  class="rd-form rd-mailform" data-form-output="" data-form-type="contact" method="post" action="/registrar">
+              
+              <p th:if= "${error !=null}" th:text="{error}"></p>
+                
 				<div class="row mt--50">
 					<div class="col-md-6 col-lg-4 col-sm-12">
 						<div class="post__sn">
@@ -259,13 +262,8 @@
 										<label>Contraseña<span>*</span></label>
 										<input type="password">
 									</div>
-									<div class="input__box">
-										<label>Repetir contraseña<span>*</span></label>
-										<input type="password">
-									</div>
-									<div class="form__btn">
-										<button>Registrar</button>
-									</div>
+										<button href="/registrar" type="submit">Registrar</button>
+									
 								</div>
 							</form>
 						</div>

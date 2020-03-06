@@ -2,6 +2,7 @@ package edu.erp.controladores;
 
 import edu.erp.entidades.errores.ErrorServicio;
 import edu.erp.servicios.UsuarioServicio;
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -49,14 +50,14 @@ public class PortalControlador {
        return "my-account.html";
   }
     @PostMapping("/registrar")
-   public String registrar(ModelMap modelo, String nombre, String mail, String tel, String clave, String clave2){
+   public String registrar(ModelMap modelo, String nombre, String email, String tel, String clave, Date alta){
        try {
-    	   System.out.println(nombre+ mail+ tel+ clave+ clave2);
-           usuarioServicio.registrar(nombre, tel, mail, tel, clave, clave2);
+    	   System.out.println(nombre+ email+ tel+ clave);
+       usuarioServicio.registrar(nombre, clave, email, tel, alta);
        } catch (ErrorServicio ex) {
            modelo.put("nombre", nombre);
 
-     modelo.put("mail", mail);
+     modelo.put("mail", email);
      modelo.put("tel", tel);
   modelo.put("clave", clave);
        return "index.html";

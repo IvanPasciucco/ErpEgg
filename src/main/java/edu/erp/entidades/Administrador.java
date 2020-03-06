@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Administrador extends User {
+public class Administrador extends Usuario {
     private String adminID;
 
     public String getAdminID() {

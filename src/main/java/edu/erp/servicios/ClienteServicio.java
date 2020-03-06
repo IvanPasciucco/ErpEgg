@@ -3,7 +3,7 @@ package edu.erp.servicios;
 import edu.erp.entidades.Cliente;
 import edu.erp.entidades.Compra;
 import edu.erp.entidades.Producto;
-import edu.erp.entidades.User;
+import edu.erp.entidades.Usuario;
 import edu.erp.entidades.errores.ErrorServicio;
 import edu.erp.enumeraciones.Estado;
 import edu.erp.repositorios.CompraRepositorio;

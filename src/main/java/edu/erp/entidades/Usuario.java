@@ -8,7 +8,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 @Entity
-public class User {
+public class Usuario {
     
     @Id
     private String DNI;
@@ -27,16 +27,7 @@ public class User {
     private Date baja;
     
     
-    public User() {
-    }    
-    
-    public User(String id, String nombre, String clave, String email, String tel) {
-        this.DNI = id;
-        this.nombre = nombre;
-        this.clave = clave;
-        this.email = email;
-        this.tel = tel;}
-    
+
     public Foto getFoto() {
         return foto;
     }

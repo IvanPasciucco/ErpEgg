@@ -8,7 +8,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 
 @Entity
-public class Cliente extends User {
+public class Cliente extends Usuario {
     private String direccion;
     private String cuil_cuit;
     
