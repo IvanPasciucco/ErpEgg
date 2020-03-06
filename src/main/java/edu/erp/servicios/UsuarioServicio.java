@@ -25,24 +25,24 @@ public class UsuarioServicio {
     @Autowired
     private FotoServicio fotoServicio;
 
-    
-    private void Registrar(MultipartFile archivo,String id,String nombre, String apellido, String mail, String clave, String clave2) throws ErrorServicio{
+    @Transactional
+    public void registrar(String nombre, String apellido, String mail, String tel, String clave, String clave2) throws ErrorServicio{
         
-        validar(id,nombre,apellido,mail,clave,clave2);
+        
         User usuario = new User();
         usuario.setNombre(nombre);
-        usuario.setId(id);
+
         usuario.setEmail(mail);
+                usuario.setTel(tel);
         usuario.setAlta(new Date());
         
-        Foto foto = fotoServicio.guardar(archivo);
-        usuario.setFoto(foto);
-        
+   
         usuarioRepositorio.save(usuario);
         
         
     }
-    private void modificar (MultipartFile foto, String DNI, String nombre,String apellido,String mail,String clave,String clave2) throws ErrorServicio{
+    @Transactional
+    public void modificar (MultipartFile foto, String DNI, String nombre,String apellido,String mail,String clave,String clave2) throws ErrorServicio{
         validar(DNI,nombre,apellido,mail,clave,clave2);
         
 

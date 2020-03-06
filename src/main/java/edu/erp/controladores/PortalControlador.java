@@ -1,6 +1,8 @@
 package edu.erp.controladores;
 
 import edu.erp.entidades.errores.ErrorServicio;
+import edu.erp.servicios.UsuarioServicio;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/")
 public class PortalControlador {
+    
+    @Autowired
+    private UsuarioServicio usuarioServicio;
     
     @GetMapping("/index")
     public String index(){
@@ -25,10 +30,6 @@ public class PortalControlador {
    public String registro() {
        return "registro.html";
   }
-    @GetMapping("/crear-cuenta")
-   public String crear() {
-       return "crear-cuenta.html";
-  }
    
    @GetMapping("/shop-grid")
    public String productos() {
@@ -42,22 +43,51 @@ public class PortalControlador {
    public String login() {
        return "login.html";
   }
-   @GetMapping("/crear-cuenta")
-   public String crear() {
-       return "crear-cuenta.html";
-  }
+ 
    @GetMapping("/my-account")
    public String mi() {
        return "my-account.html";
   }
     @PostMapping("/registrar")
-   public String registrar(ModelMap modelo){
-       System.out.println();//           modelo.put("error", ex.getMessage());
+   public String registrar(ModelMap modelo, String nombre, String mail, String tel, String clave, String clave2){
+       try {
+    	   System.out.println(nombre+ mail+ tel+ clave+ clave2);
+           usuarioServicio.registrar(nombre, tel, mail, tel, clave, clave2);
+       } catch (ErrorServicio ex) {
+           modelo.put("nombre", nombre);
+
+     modelo.put("mail", mail);
+     modelo.put("tel", tel);
+  modelo.put("clave", clave);
+       return "index.html";
+       }
+   /* @PostMapping("/registrar")
+//   public String registrar(ModelMap modelo, String nombre, String apellido, String mail, String clave, String grupo_sanguineo,
+   		String zona, String edad, String peso,
+   		String medicacion, String alergias, String antecedentes){
+       try {
+    	   System.out.println(nombre+  apellido+  mail+  clave+  grupo_sanguineo+
+           		 zona+  Integer.parseInt(edad)+  Integer.parseInt(peso)+  
+        		 medicacion+  alergias+  antecedentes);
+           usuarioServicio.registrar( nombre,  apellido,  mail,  clave,  grupo_sanguineo,
+           		 zona,  Integer.parseInt(edad),  Integer.parseInt(peso), 
+        		 medicacion,  alergias,  antecedentes);
+       } catch (ErrorServicio ex) {
+          
+//           modelo.put("error", ex.getMessage());
 //           modelo.put("nombre", nombre);
 //           modelo.put("apellido", apellido);
 //           modelo.put("mail", mail);
 //           modelo.put("clave", clave);
+//           modelo.put("zona", idZona);
+//           modelo.put("grupo_sanguineo", grupo_sanguineo);
+//           modelo.put("requisitos", id_requisitos);
+          return "registro.html";
+           
+       }
        return "index.html";
        }
-    
+}*/
+        return null;
+}
 }
